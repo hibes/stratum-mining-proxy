@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-from distribute_setup import use_setuptools
-use_setuptools()
-
 from setuptools import setup, Extension
 import sys, os
 try:
@@ -20,7 +16,7 @@ args = {
     'url': 'http://mining.bitcoin.cz/stratum-mining/',
     'ext_modules': [
       Extension(
-        'midstate', 
+        'midstate',
         ['midstatec/midstatemodule.c'],
         include_dirs=['/usr/include/python2.7'],
         extra_compile_args=['-march=native', '-Wall', '-funroll-all-loops', '-O3', '-fstrict-aliasing', '-Wall', '-std=c99',  '-fPIC', '-shared'],
